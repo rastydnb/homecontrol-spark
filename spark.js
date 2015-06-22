@@ -24,8 +24,8 @@ module.exports = {
   init: function(){
     var board = new five.Board({
       io: new Spark({
-        token: "7e0aa933046e52c5f4aa0bd6389e5145aef22d75",
-        deviceId: "51ff6b065082554952230887"
+        token: process.env.SPARK_TOKEN,
+        deviceId: process.env.SPARK_DEVICE_ID
       })
     });
     d0 = new five.Relay({
